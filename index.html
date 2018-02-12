@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Calculator</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <div class="container-fluid">
+      <div>
+      <h1 >Web Calculator</h1>
+  </div>
+    <!-- calculator starts here-->      
+      <div id="box"> 
+    <input type='text' id='display'>
+  <!-- buttons start from here-->   
+        <form>
+          
+<div class="row">
+    <div type="button" class="col-lg-3 btn btn-lg btn-danger"  id="clear" onclick = 'addToDisplay("AC")'>AC</div>
+     <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("(")'>(</div> 
+    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay(")")'>)</div>
+    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick="backspace()">DEL</div> 
+  </div>
+          
+          
+  <div class="row">
+  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay(Math.PI)'>&pi;</div>
+     <div type="button" class="col-lg-3 btn btn-lg btn-default"  onclick ="square()">x<sup>2</sup></div>   
+  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='squareRoot()'>√x</div>  
+    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='toPercent()'>%</div> 
+  </div>
+          
+          
+  <div class="row">
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("7")'>7</div>
+   <div type="button" class="keys col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("8")'>8</div>
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick = 'addToDisplay("9")'>9</div>
+    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick = 'addToDisplay("/")'>÷</div>  
+  </div>
+          
+          
+  <div class="row">
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick = 'addToDisplay("4")'>4</div>
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("5")'>5</div> 
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick='addToDisplay("6")'>6</div>
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("*")'>×</div> 
+  </div>
+          
+          
+    <div class="row">
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("1")'>1</div>
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("2")'>2</div>
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("3")'>3</div>
+   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("-")'>-</div>  
+  </div>
+  
+          
+      <div class="row">
+  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("0")'>0</div>
+  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay(".")'> . </div> 
+  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='answer()'>=</div>
+  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("+")'> +</div>
+    </div>
+
+        </form>
+</div>
+      <!--calculator ends here-->
+    </div>   
+</body>
+
+
+<!--footer-->
+
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+     <li><a href="https://codepen.io/fahamida/full/dRPVNy/" target="_blank"> Fahamida's Portfolio</a>
+          </li>
+  <li><a href="https://www.linkedin.com/in/fahamida-haque/" target="_blank">LinkedIn</a></li> 
+  <li> <a href="https://www.freecodecamp.com" target="_blank">Free Code Camp</a></li>
+<li><a href="http://www.fahamida.com" target="_blank">Fahamida Haque &copy; 2017. All Rights Reserved</a></li>
+
+  </ul>  
+</nav>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
