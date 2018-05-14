@@ -1,108 +1,182 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Javascript Calculator</title>
-  
-  
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'
+        rel='stylesheet prefetch'>
+  <link href="css/style.css"
+        rel="stylesheet">
 </head>
-
 <body>
-
-  
-<body>
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <div class="container-fluid">
-      <div>
-      <h1 >Web Calculator</h1>
-  </div>
-    <!-- calculator starts here-->      
-      <div id="box"> 
-    <input type='text' id='display'>
-  <!-- buttons start from here-->   
-        <form>
-          
-<div class="row">
-    <div type="button" class="col-lg-3 btn btn-lg btn-danger"  id="clear" onclick = 'addToDisplay("AC")'>AC</div>
-     <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("(")'>(</div> 
-    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay(")")'>)</div>
-    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick="backspace()">DEL</div> 
-  </div>
-          
-          
-  <div class="row">
-  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay(Math.PI)'>&pi;</div>
-     <div type="button" class="col-lg-3 btn btn-lg btn-default"  onclick ="square()">x<sup>2</sup></div>   
-  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='squareRoot()'>√x</div>  
-    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='toPercent()'>%</div> 
-  </div>
-          
-          
-  <div class="row">
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("7")'>7</div>
-   <div type="button" class="keys col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("8")'>8</div>
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick = 'addToDisplay("9")'>9</div>
-    <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick = 'addToDisplay("/")'>÷</div>  
-  </div>
-          
-          
-  <div class="row">
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick = 'addToDisplay("4")'>4</div>
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("5")'>5</div> 
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick='addToDisplay("6")'>6</div>
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("*")'>×</div> 
-  </div>
-          
-          
-    <div class="row">
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("1")'>1</div>
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("2")'>2</div>
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("3")'>3</div>
-   <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("-")'>-</div>  
-  </div>
-  
-          
-      <div class="row">
-  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("0")'>0</div>
-  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay(".")'> . </div> 
-  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='answer()'>=</div>
-  <div type="button" class="col-lg-3 btn btn-lg btn-default" onclick ='addToDisplay("+")'> +</div>
-    </div>
-
-        </form>
-</div>
-      <!--calculator ends here-->
-    </div>   
+  <link href="https://fonts.googleapis.com/css?family=Lobster"
+        rel="stylesheet"
+        type="text/css">
+  <div class="container-fluid">
+    <div>
+      <h1>Web Calculator</h1>
+    </div><!-- calculator starts here-->
+    <div id="box">
+      <input id='display'
+           type='text'> <!-- buttons start from here-->
+      <form>
+        <div class="row">
+          <div class="col-lg-3 btn btn-lg btn-danger"
+               id="clear"
+               onclick='addToDisplay("AC")'
+               type="button">
+            AC
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("(")'
+               type="button">
+            (
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay(")")'
+               type="button">
+            )
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick="backspace()"
+               type="button">
+            DEL
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay(Math.PI)'
+               type="button">
+            &pi;
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick="square()"
+               type="button">
+            x<sup>2</sup>
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='squareRoot()'
+               type="button">
+            √x
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='toPercent()'
+               type="button">
+            %
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("7")'
+               type="button">
+            7
+          </div>
+          <div class="keys col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("8")'
+               type="button">
+            8
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("9")'
+               type="button">
+            9
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("/")'
+               type="button">
+            ÷
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("4")'
+               type="button">
+            4
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("5")'
+               type="button">
+            5
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("6")'
+               type="button">
+            6
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("*")'
+               type="button">
+            ×
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("1")'
+               type="button">
+            1
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("2")'
+               type="button">
+            2
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("3")'
+               type="button">
+            3
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("-")'
+               type="button">
+            -
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("0")'
+               type="button">
+            0
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay(".")'
+               type="button">
+            .
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='answer()'
+               type="button">
+            =
+          </div>
+          <div class="col-lg-3 btn btn-lg btn-default"
+               onclick='addToDisplay("+")'
+               type="button">
+            +
+          </div>
+        </div>
+      </form>
+    </div><!--calculator ends here-->
+  </div><!--footer-->
+  <nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="http://www.fahamida.com"
+            target="_blank">Fahamida's Portfolio</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/fahamida-haque/"
+            target="_blank">LinkedIn</a>
+      </li>
+      <li>
+        <a href="https://www.freecodecamp.com"
+            target="_blank">Free Code Camp</a>
+      </li>
+      <li>
+        <a href="http://www.fahamida.com"
+            target="_blank">Fahamida Haque &copy; 2017. All Rights Reserved</a>
+      </li>
+    </ul>
+  </nav>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> 
+  <script src="js/index.js"></script>
 </body>
-
-
-<!--footer-->
-
-<nav class="navbar navbar-inverse">
-  <ul class="nav navbar-nav">
-     <li><a href="https://codepen.io/fahamida/full/dRPVNy/" target="_blank"> Fahamida's Portfolio</a>
-          </li>
-  <li><a href="https://www.linkedin.com/in/fahamida-haque/" target="_blank">LinkedIn</a></li> 
-  <li> <a href="https://www.freecodecamp.com" target="_blank">Free Code Camp</a></li>
-<li><a href="http://www.fahamida.com" target="_blank">Fahamida Haque &copy; 2017. All Rights Reserved</a></li>
-
-  </ul>  
-</nav>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
-</body>
-
 </html>
